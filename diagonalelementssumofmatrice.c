@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+	int n,a[n][n],i,j,p_diag_sum=0,s_diag_sum=0;
+	scanf("%d",&n);
+     for(i=0;i<n;i++)
+     {
+     	for(j=0;j<n;j++)
+     	{
+     		scanf("%d",&a[i][j]);
+		}
+     }
+	for(i=0;i<n;i++)
+	{
+    	for(j=0;j<n;j++);
+	 		{
+	 			if(i=j)
+	 			{
+	 				p_diag_sum+=a[i][j];
+				}
+				if(i+j==n-1)
+				{
+					s_diag_sum+=a[i][j];
+				}
+			}
+	    }
+	 printf("%d",abs(p_diag_sum-s_diag_sum));	
+}
